@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = ["srp-client", "srp-cli"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+hickory-proto = { version = "0.25", default-features = false, features = ["std", "dnssec-ring"] }
+srp-client = { path = "srp-client" }
+thiserror = "2"
+rand = "0.9"
+data-encoding = "2"
+rustls-pki-types = "1"
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+tokio-rustls = { version = "0.26", default-features = false, features = ["ring", "tls12"] }
+rcgen = { version = "0.13", default-features = false, features = ["ring", "pem"] }
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", default-features = false }

@@ -1,0 +1,20 @@
+[package]
+name = "srp-client"
+description = "DNS-SD Service Registration Protocol (RFC 9665) client"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+hickory-proto.workspace = true
+thiserror.workspace = true
+rand.workspace = true
+data-encoding.workspace = true
+rustls-pki-types.workspace = true
+tokio = { workspace = true, features = ["net", "time", "io-util", "macros"] }
+tokio-rustls.workspace = true
+rustls.workspace = true
+
+[dev-dependencies]
+rcgen.workspace = true
+tokio = { workspace = true, features = ["macros", "rt", "sync"] }

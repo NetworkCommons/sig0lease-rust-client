@@ -1,0 +1,17 @@
+[package]
+name = "srp-cli"
+description = "Command line client for DNS-SD Service Registration Protocol (RFC 9665)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "srp"
+path = "src/main.rs"
+
+[dependencies]
+srp-client.workspace = true
+hickory-proto.workspace = true
+clap.workspace = true
+rustls-pki-types.workspace = true
+tokio = { workspace = true, features = ["net", "macros", "rt", "signal", "time"] }
